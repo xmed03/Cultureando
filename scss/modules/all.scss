@@ -1,0 +1,50 @@
+/*DECLARACIÓN MIXIN*/
+
+@mixin sizes($height, $width){
+    height: $height;
+    width: $width;
+}
+
+@mixin display($display, $flex-flow, $align-items, $justify-content){
+    display: $display;
+    flex-flow: $flex-flow;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin font($color, $font-family, $font-size, $font-weight){
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin margin($margin-top, $margin-left, $margin-bottom, $margin-right){
+    margin-top: $margin-top;
+    margin-left: $margin-left;
+    margin-bottom: $margin-bottom;
+    margin-right: $margin-right;
+}
+
+@mixin padding($padding-top, $padding-left, $padding-bottom, $padding-right){
+    padding-top: $padding-top;
+    padding-left: $padding-left;
+    padding-bottom: $padding-bottom;
+    padding-right: $padding-right;
+}
+
+@mixin border($border-style, $border-color, $border-top-width, $border-left-width, $border-bottom-width, $border-right-width){
+    border-style: $border-style;
+    border-color: $border-color;
+    border-top-width: $border-top-width;
+    border-left-width: $border-left-width;
+    border-bottom-width: $border-bottom-width;
+    border-right-width: $border-right-width;
+}
+
+@mixin bcg-img($background-image, $background-position, $background-size, $background-repeat){
+    background-image: $background-image;
+    background-position: $background-position;
+    background-size: $background-size;
+    background-repeat: $background-repeat;
+}

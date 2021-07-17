@@ -1,0 +1,48 @@
+#header__section__spanRight__lightDark{
+    @include display(flex, row nowrap, center, flex-start);
+    @include margin(0, 0, 0, 2 * $header-section-right);
+    @include sizes(20px, 40px);
+    #header__section__spanRight__lightDark__img1{
+        appearance: none;
+        @include sizes($header-section-img1-hg, $header-section-img1-wd);
+        position: absolute;
+        background-color: $headerRight-l;
+        border-radius: 15%;
+    }
+    #header__section__spanRight__lightDark__img1:checked ~ #header__section__spanRight__lightDark__img2{
+        transform: translateX(35px);
+        background-image: url("../img/header/luna.PNG");
+    }
+    #header__section__spanRight__lightDark__img2{
+        @include sizes($header-section-img2-hg, $header-section-img2-wd);
+        @include bcg-img(url("../img/header/sol.PNG"), center, 70%, no-repeat);
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px $headerRight-l;
+        box-sizing: border-box;
+    }                
+}
+
+.buttom{
+    @include padding(5px, 10px, 5px, 10px);
+    @include font($headerNavbcg, $headerFamily, $headerSize, bolder);
+    width: auto;
+    border-radius: 5%;
+    box-sizing: border-box;
+}    
+.buttom__trending{
+    background-color: $headerRightHover-l;
+}
+.buttom__musica{
+    background-color: red;
+}
+.buttom__cine{
+    background-color: green;
+}
+.buttom__literatura{
+    background-color: blue;
+}
+.buttom__teatro{
+    background-color: yellow;
+}

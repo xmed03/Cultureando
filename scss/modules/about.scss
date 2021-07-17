@@ -1,0 +1,15 @@
+#about__main{
+    #about__main__section1{
+        @include display(flex, column nowrap, center, center);
+        @include sizes($about-section1, 100%);
+        @include bcg-img(url("../img/about/about.jpg"), center, cover, no-repeat);
+        border-radius: 5%;
+        h1{
+            @include font($headerNavbcg, $headerFamily, $about-about, bolder);
+        }
+        h2{
+            @include font($headerNavbcg, $headerFamily, $about-aboutlittle, bolder);
+            @include margin(30px, 0, 0, 0);
+        }
+    }
+}

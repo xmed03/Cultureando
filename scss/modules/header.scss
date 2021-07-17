@@ -1,0 +1,364 @@
+@media only screen and (max-width: 600px) {
+
+.header__nav{
+    @include display(flex, row nowrap, center, flex-start);
+    @include sizes(auto, 100%);
+    @include padding(0, $body-XS-mg, 0, $body-XS-mg);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-height: $header-hg;
+    background-color: $bcg-l;
+    box-sizing: border-box;
+    #header__nav__logo{
+        @include sizes($header-nav-menu, $header-logo-wd);
+        @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+    }
+    #header__nav__right{
+        @include display(flex, row wrap, center, flex-end);
+        @include sizes(auto, 100%);
+        @each $secc in rightMenu2, right__menuLabel, subscribe, rightMenu, rightLupa, rightNav{
+            #header__nav__#{$secc}{
+                display: none;
+            }
+        }
+        .header__nav__right{
+            appearance: none;
+            @include sizes($header-nav-menu, $header-nav-menu);
+            @include margin(0, $header-nav-menu-mg, 0, 0);
+        }
+        @each $secc in menu, lupa, nav{
+            #header__nav__right__#{$secc}{
+                @include bcg-img(url("../img/header/#{$secc}.png"), center, cover, no-repeat);
+            }
+        }
+        .header__nav__rightMenu{
+            @include display(flex, row wrap, center, flex-start);
+            @include sizes($header-submenu-hg, 100%);
+            @include padding(0, $body-XS-mg, 0, 0);
+            @include border(solid, $headerBorder-l, 1px, 0px, 0px, 0px);
+            @include font($headerFont-l, $headerFamily, $headerSize, bolder);
+        }
+        .header__nav__rightMenu:hover{
+            color: $headerRightHover-l;
+        }
+        #header__nav__right__menu:checked ~ #header__nav__rightMenu{
+            @include display(flex, column wrap, center, center);
+            @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
+            background-color: $headerNavbcg;
+            position: absolute;
+            top: $header-hg;
+            left: 0;
+            width: 100vw;
+        }
+        #header__nav__rightLupa__input{
+            @include sizes($header-nav-input-lupa-hg, $header-nav-input-lupa-wd);
+            @include border(solid, $headerNavinputborder, 1px, 1px, 1px, 1px);
+            @include font(gray, $headerFamily, 15px, bolder);
+            border-radius: 5%;
+            box-sizing: border-box;
+        }
+        #header__nav__rightLupa__button{
+            @include sizes($header-nav-input-lupa-hg, $header-nav-input-button-wd);
+            @include border(solid, $headerNavinputborder, 1px, 1px, 1px, 1px);
+            @include font($headerNavbcg, $headerFamily, 15px, bolder);
+            background-color: $headerNavinputborder;
+            border-radius: 5%;
+            box-sizing: border-box;
+        }
+        #header__nav__right__lupa:checked ~ #header__nav__rightLupa{
+            @include display(flex, row wrap, center, center);
+            @include padding(8px, 8px, 8px, 8px);
+            position: absolute;
+            top: $header-hg - 10px;
+            right: $header-nav-menu + $body-XS-mg + $header-nav-menu-mg;
+            width: auto;
+            background-color: $headerNavbcg;
+            border-radius: 5%;
+            box-shadow: 0 0 5px $headerRight-l;
+        }
+        #header__nav__rightNav__logo{
+            @include sizes(50px, 150px);
+            @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+            margin-bottom: 20px;
+        }
+        .header__nav__rightNav__p1{
+            @include font($headerRight-l, $headerFamily, 15px, bold);
+            margin: 0;
+        }
+        .header__nav__rightNav__p2{
+            @include font($headerRight-l, $headerFamily, 15px, bolder);
+        }
+        .header__nav__rightNav{
+            @include font($headerFont-l, $headerFamily, 20px, bolder);
+            line-height: 50px;
+        }
+        #header__nav__right__nav:checked{
+            position: absolute;
+            top: 15px;
+            left: calc(100% - 65px);
+            background-image: url("../img/header/cross.png");
+            z-index: 3;
+        }
+        #header__nav__right__nav:checked ~ #header__nav__rightNav{
+            @include display(flex, column nowrap, flex-start, flex-start);
+            @include sizes(100vh, calc(100% - 45px));
+            @include padding(60px, 20px, 8px, 150px);
+            @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $headerNavbcg;
+        }
+        .header__nav__rightNav:hover{
+            color: $headerRightHover-l;
+        }
+    }
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .header__nav{
+        @include display(flex, row nowrap, center, flex-start);
+        @include sizes(auto, 100%);
+        @include padding(0, $body-S-mg, 0, $body-S-mg);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        min-height: $header-hg;
+        background-color: $bcg-l;
+        box-sizing: border-box;
+        #header__nav__logo{
+            @include sizes($header-nav-menu, $header-logo-wd);
+            @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+        }
+        #header__nav__right{
+            @include display(flex, row wrap, center, flex-end);
+            @include sizes(auto, 100%);
+            @include font($headerFont-l, $headerFamily, 15px, bolder);
+            @each $secc in rightMenu2, subscribe, rightMenu, rightLupa, rightNav{
+                #header__nav__#{$secc}{
+                    display: none;
+                }
+            }
+            .header__nav__right{
+                appearance: none;
+                @include sizes($header-nav-menu, $header-nav-menu);
+                @include margin(0, $header-nav-menu-mg, 0, 0);
+            }
+            @each $secc in menu, lupa, nav{
+                #header__nav__right__#{$secc}{
+                    @include bcg-img(url("../img/header/#{$secc}.png"), center, cover, no-repeat);
+                }
+            }
+            .header__nav__rightMenu{
+                @include display(flex, row wrap, center, flex-start);
+                @include sizes($header-submenu-hg, 100%);
+                @include padding(0, $body-XS-mg, 0, 0);
+                @include border(solid, $headerBorder-l, 1px, 0px, 0px, 0px);
+                @include font($headerFont-l, $headerFamily, $headerSize, bolder);
+            }
+            .header__nav__rightMenu:hover{
+                color: $headerRightHover-l;
+            }
+            #header__nav__right__menu:checked ~ #header__nav__rightMenu{
+                @include display(flex, column wrap, center, center);
+                @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
+                background-color: $headerNavbcg;
+                position: absolute;
+                top: $header-hg;
+                left: 0;
+                width: 100vw;
+            }
+            #header__nav__rightLupa__input{
+                @include sizes($header-nav-input-lupa-hg, $header-nav-input-lupaL-wd);
+                @include border(solid, $headerNavinputborder, 1px, 1px, 1px, 1px);
+                @include font(gray, $headerFamily, 15px, bolder);
+                border-radius: 5%;
+                box-sizing: border-box;
+            }
+            #header__nav__rightLupa__button{
+                @include sizes($header-nav-input-lupa-hg, $header-nav-input-button-wd);
+                @include border(solid, $headerNavinputborder, 1px, 1px, 1px, 1px);
+                @include font($headerNavbcg, $headerFamily, 15px, bolder);
+                background-color: $headerNavinputborder;
+                border-radius: 5%;
+                box-sizing: border-box;
+            }
+            #header__nav__right__lupa:checked ~ #header__nav__rightLupa{
+                @include display(flex, row wrap, center, center);
+                @include padding(8px, 8px, 8px, 8px);
+                position: absolute;
+                top: $header-hg - 10px;
+                right: $header-nav-menu + $body-XS-mg + $header-nav-menu-mg;
+                width: auto;
+                background-color: $headerNavbcg;
+                border-radius: 5%;
+                box-shadow: 0 0 5px $headerRight-l;
+            }
+            #header__nav__rightNav__logo{
+                @include sizes(50px, 150px);
+                @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+                margin-bottom: 20px;
+                z-index: 4;
+            }
+            .header__nav__rightNav__p1{
+                @include font($headerRight-l, $headerFamily, 15px, bold);
+                margin: 0;
+            }
+            .header__nav__rightNav__p2{
+                @include font($headerRight-l, $headerFamily, 15px, bolder);
+            }
+            .header__nav__rightNav{
+                @include font($headerFont-l, $headerFamily, 20px, bolder);
+                line-height: 50px;
+            }
+            #header__nav__right__nav:checked{
+                position: absolute;
+                top: 15px;
+                left: calc(100% - 65px);
+                background-image: url("../img/header/cross.png");
+                z-index: 3;
+            }
+            #header__nav__right__nav:checked ~ #header__nav__rightNav{
+                @include display(flex, column nowrap, flex-start, flex-start);
+                @include sizes(100vh, 300px);
+                @include padding(60px, 20px, 8px, 150px);
+                @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
+                position: absolute;
+                top: 0;
+                left: calc(100% - 345px);
+                background-color: $headerNavbcg;
+            }
+            .header__nav__rightNav:hover{
+                color: $headerRightHover-l;
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+.header__nav{
+    min-height: $header-hgL;
+    @include padding(0, $body-M-mg, 0, $body-M-mg);
+    #header__nav__logo{
+        @include sizes($header-logo-hgL, $header-logo-wdL);
+    }
+    #header__nav__subscribe{
+        @include sizes(35px, 100px);
+        @include margin(0, 10px, 0, 10px);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background-color: $headerNavSubscribe;
+        color: $headerNavbcg;
+        border-radius: 5%;
+    }
+    #header__nav__rightMenu{
+        top: $header-hgL !important;
+    }
+    #header__nav__rightLupa{
+        top: $header-hgL - 20px !important;
+    }
+}
+
+}
+
+
+
+@media only screen and (min-width: 992px) {
+
+header{
+    box-sizing: border-box;
+    #header__section{
+        display: block;
+        @include sizes($header-hg, calc(100% - 100px));
+        @include border(solid, $headerBorder-l, 0, 0, 2px, 0);
+        @include font($headerFont-l, $headerFamily, $headerSize, bolder);
+        position: fixed;
+        left: $body-L-mg;
+        background-color: $bcg-l;
+        box-sizing: border-box;
+        #header__section__spanLeft{
+            @include display(flex, row nowrap, center, flex-start);
+            @include sizes($header-hg, auto);
+            .header__section__spanLeft{
+                @include margin(0, 0, 0, $header-section-left);
+            }
+            .header__section__spanLeft:hover{
+                color: $headerRightHover-l;
+            }
+        }
+        #header__section__spanRight{
+            @include display(flex, row nowrap, center, flex-end);
+            @include sizes($header-hg, 100%);
+            .header__section__spanRight{
+                @include margin(0, $header-section-right, 0, 0);
+                @include sizes($header-section-img, $header-section-img);
+                background-color: $headerRight-l;
+                border-radius: 25%;
+            }
+            .header__section__spanRight:hover{
+                background-color: $headerRightHover-l;
+            }
+            @each $red in fb, tw, ig, yt{
+                #header__section__spanRight__#{$red}{
+                    @include bcg-img(url("../img/header/#{$red}.png"), center, cover, no-repeat);
+                }
+            } 
+        }
+    }
+    .header__nav{
+        @include padding(0, $body-L-mg, 0, $body-L-mg);
+        #header__nav__right{
+            @each $secc in right__menuLabel, right__menu{
+                #header__nav__#{$secc}{
+                    display: none;
+                }
+            }
+            #header__nav__rightMenu2{
+                @include display(flex, row nowrap, center, center);
+                width: calc(100% - 240px);
+            }
+            .header__nav__rightMenu2{
+                @include padding(0, 20px, 0, 20px);
+            }
+            .header__nav__rightMenu2:hover{
+                color: $headerRightHover-l;
+            }
+            #header__nav__rightNav{
+                top: -$header-hg !important;
+            }
+            #header__nav__right__nav:checked{
+                top: 15px -$header-hg !important;
+            }            
+        }
+    }
+    #index__header__nav{
+        top: $header-hg;
+    }
+}
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+header{
+    #header__section{
+        @include sizes($header-hg, calc(100% - 200px));
+        left: $body-XL-mg;
+    }
+    .header__nav{
+        @include padding(0, $body-XL-mg, 0, $body-XL-mg);
+    }
+}
+
+}

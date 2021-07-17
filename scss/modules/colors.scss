@@ -1,0 +1,27 @@
+/* Definición variables*/
+
+$modo: 1;
+
+@if $modo == 1{
+    $bcg-color: yellow;
+} @else{
+    $bcg-color: pink;
+}
+
+
+
+/*Modo light*/
+
+$bcg-l: rgb(245, 245, 245);
+$headerFont-l: rgb(44, 44, 44);
+$headerBorder-l: rgb(233, 233, 255);
+$headerRight-l: rgb(85, 85, 85);
+$headerRightHover-l: rgb(37, 37, 250);
+$headerNavbcg: white;
+$headerNavinputborder: rgb(50, 184, 50);
+$headerNavSubscribe: rgb(206, 4, 4);
+
+/*Modo dark*/
+
+$bcg-d: black;
+$font-d: white;
