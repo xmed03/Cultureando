@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+#post__main__section2{
+    @include font(black, $headerFamily, $post-fs, bolder);
+    @include margin($body-M-mg, 0, 0, 0);
+    @include padding($body-XS-mg, 0, 0, 0);
+    @include border(solid, $headerBorder-l, 2px, 0, 0, 0);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos un equipo preparado para resumir las tendencias actuales en blogs cortos e interesantes.">
+    <title>Cultureando | About us</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+            <a href="../index.html"><div id="header__nav__logo"></div></a>
+            <span id="header__nav__right">
+                <span id="header__nav__rightMenu2">
+                    <div class="header__nav__rightMenu2"><a class="contacto__a" href="../index.html">Home</a></div>
+                    <div class="header__nav__rightMenu2"><a class="contacto__a" href="about.html">About</a></div>
+                    <div class="header__nav__rightMenu2"><a class="contacto__a" href="list.html">Posts</a></div>
+                    <div class="header__nav__rightMenu2"><a class="contacto__a" href="contacto.html">● Contacto</a></div>
+                </span>
+                <label for="header__nav__right__menu" id="header__nav__right__menuLabel">Menu</label>
+                <input type="checkbox" class="header__nav__right" id="header__nav__right__menu">
+                <span id="header__nav__subscribe">Subscribe!</span>
+                <input type="checkbox" class="header__nav__right" id="header__nav__right__lupa">
+                <input type="checkbox" class="header__nav__right header__nav__right__nav" id="header__nav__right__nav">
+                <span id="header__nav__rightMenu">
+                    <div class="header__nav__rightMenu"><a class="contacto__a" href="../index.html">Home</a></div>
+                    <div class="header__nav__rightMenu"><a class="contacto__a" href="about.html">About</a></div>
+                    <div class="header__nav__rightMenu"><a class="contacto__a" href="list.html">Posts</a></div>
+                    <div class="header__nav__rightMenu"><a class="contacto__a" href="contacto.html">● Contacto</a></div>
+                </span>
+                <div id="header__nav__rightLupa">
+                    <input type="text" id="header__nav__rightLupa__input" placeholder="Search">
+                    <button id="header__nav__rightLupa__button">Search</button>
+                </div>
+                <div id="header__nav__rightNav" class="header__nav__rightNav">
+                    <div id="header__nav__rightNav__logo"></div>
+                    <p class="header__nav__rightNav__p1">Tu portal a los datos curiosos más interesantes de música, historia, cine y más!</p>
+                    <div class="header__nav__rightNav__div"><a class="contacto__a" href="../index.html">Home</a></div>
+                    <div class="header__nav__rightNav__div"><a class="contacto__a" href="about.html">About</a></div>
+                    <div class="header__nav__rightNav__div"><a class="contacto__a" href="contacto.html">Contacto</a></div>
+                    <p class="header__nav__rightNav__p2">Buenos Aires, ARGENTINA</p>
+                    <p class="header__nav__rightNav__p1">48 Corrientes, Balvanera, BA, 1587</p>
+                    <p class="header__nav__rightNav__p1">Call: +54 9 11 4856 5896</p>
+                    <p class="header__nav__rightNav__p1">hola@gmail.com</p>
+                </div>   
+            </span>
+        </nav>
+    </header>
+    <main id="contacto__main">
+        <section id="main__section1">
+            <h1 id="main__section1__div1">Contactanos</h1>
+            <h2 id="main__section1__div2"><a class="contacto__a" href="../index.html"><div></div>Home</a> ● Contacto</h2>
+        </section>
+        <section id="contacto__main__section2">
+            <h2>Contactanos</h2>
+            <h3>Completá el formulario y nos contactaremos con vos. Tu email no será publicado.</h3>
+        </section>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Nombre</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Email</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Provincia</label>
+              <select id="inputState" class="form-select">
+                <option selected>Elegir...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Código postal</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Deseo recibir publicidad.
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+          <footer></footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

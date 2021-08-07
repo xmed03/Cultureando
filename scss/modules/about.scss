@@ -1,15 +1,143 @@
+/*DISPOSITIVOS CELULARES VERTICALES*/
+
+@media only screen and (max-width: 600px) {
+
 #about__main{
-    #about__main__section1{
-        @include display(flex, column nowrap, center, center);
-        @include sizes($about-section1, 100%);
-        @include bcg-img(url("../img/about/about.jpg"), center, cover, no-repeat);
-        border-radius: 5%;
-        h1{
-            @include font($headerNavbcg, $headerFamily, $about-about, bolder);
-        }
+    #about__main__section2{
+        @include margin($body-S-mg, 0, 0, 0);
         h2{
-            @include font($headerNavbcg, $headerFamily, $about-aboutlittle, bolder);
-            @include margin(30px, 0, 0, 0);
+            @include font(black, $headerFamily, $about-title-fs, bolder);
+        }
+        p{
+            @include font($headerRight-l, $headerFamily, $about-parrafo-fs, bolder);
+        }
+        #about__main__section2__div{
+            @include display(flex, column nowrap, center, center);
+            .about__main__section2__div{
+                @include display(flex, column nowrap, center, center);
+                @include margin($body-XS-mg, 0, $body-XS-mg, 0);
+                .about__main__section2__div__foto{
+                    @include sizes($about-foto-hg, $about-foto-hg);
+                    border-radius: 50%;
+                }
+                .about__main__section2__div__nombre{
+                    @include font(black, $headerFamily, $about-nombre-fs, bolder);
+                    @include margin(7px, 0, 0, 0);
+                }
+                .about__main__section2__div__puesto{
+                    @include font($headerRight-l, $headerFamily, $about-puesto-fs, bolder);
+                    @include margin(7px, 0, 0, 0);
+                }
+                @each $secc in antonieta, pedro, emilia{
+                    #about__main__section2__div__#{$secc}{
+                        @include bcg-img(url("../img/about/#{$secc}.jpg"), center, cover, no-repeat);
+                    }
+                }
+            }
         }
     }
+}
+#main__section1{
+    @include display(flex, column nowrap, center, center);
+    @include sizes($about-section1, 100%);
+    @include bcg-img(url("../img/about/about.jpg"), center, cover, no-repeat);
+    border-radius: 5%;
+    h1{
+        @include font($headerNavbcg, $headerFamily, $about-about, bolder);
+    }
+    h2{
+        @include font($headerNavbcg, $headerFamily, $about-aboutlittle, bolder);
+        @include margin(30px, 0, 0, 0);
+        div{
+            @include sizes($about-home-hg, $about-home-hg);
+            @include margin(0, 0, 0, $about-home-hg);
+            @include bcg-img(url("../img/about/home.svg"), center, cover, no-repeat);
+            display: inline-block;
+        }
+    }
+}
+
+}
+
+
+
+/*DISPOSITIVOS CELULARES HORIZONTALES*/
+
+@media only screen and (min-width: 600px) {
+
+#about__main{
+    #about__main__section2{
+        @include margin($body-S-mg, 0, 0, 0);
+        h2{
+            @include font(black, $headerFamily, $about-title-fs, bolder);
+        }
+        p{
+            @include font($headerRight-l, $headerFamily, $about-parrafo-fs, bolder);
+        }
+        #about__main__section2__div{
+            @include display(flex, row nowrap, center, center);
+            .about__main__section2__div{
+                @include display(flex, column nowrap, center, center);
+                @include margin($body-S-mg, $body-S-mg, $body-S-mg, $body-S-mg);
+                .about__main__section2__div__foto{
+                    @include sizes($about-foto-hg, $about-foto-hg);
+                    border-radius: 50%;
+                }
+                .about__main__section2__div__nombre{
+                    @include font(black, $headerFamily, $about-nombre-fs, bolder);
+                    @include margin(7px, 0, 0, 0);
+                    text-align: center;
+                }
+                .about__main__section2__div__puesto{
+                    @include font($headerRight-l, $headerFamily, $about-puesto-fs, bolder);
+                    @include margin(7px, 0, 0, 0);
+                    text-align: center;
+                }
+                @each $secc in antonieta, pedro, emilia{
+                    #about__main__section2__div__#{$secc}{
+                        @include bcg-img(url("../img/about/#{$secc}.jpg"), center, cover, no-repeat);
+                    }
+                }
+            }
+        }
+    }
+}
+#main__section1{
+    @include display(flex, column nowrap, center, center);
+    @include sizes($about-section1, 100%);
+    @include bcg-img(url("../img/about/about.jpg"), center, cover, no-repeat);
+    border-radius: 5%;
+    h1{
+        @include font($headerNavbcg, $headerFamily, $about-about, bolder);
+    }
+    h2{
+        @include font($headerNavbcg, $headerFamily, $about-aboutlittle, bolder);
+        @include margin(30px, 0, 0, 0);
+        div{
+            @include sizes($about-home-hg, $about-home-hg);
+            @include margin(0, 0, 0, $about-home-hg);
+            @include bcg-img(url("../img/about/home.svg"), center, cover, no-repeat);
+            display: inline-block;
+        }
+    }
+}
+
+}
+
+
+
+/*TABLETS VERTICALES*/
+
+@media only screen and (min-width: 768px) {
+
+#main__section1{
+    @include sizes($about-section1-M, 100%);  
+    h1{
+        @include font($headerNavbcg, $headerFamily, 60px, bolder);
+    }
+    h2{
+        @include font($headerNavbcg, $headerFamily, 20px, bolder);
+    }
+}
+
 }

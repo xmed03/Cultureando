@@ -1,0 +1,14 @@
+.contacto__a{
+    text-decoration: none;
+    color: inherit;
+}
+#contacto__main__section2{
+    h2{
+    @include font(black, $headerFamily, $contacto-h2-fs, bolder);
+    @include margin($body-S-mg, 0, 0, 0);        
+    }
+    h3{
+        @include font(black, $headerFamily, $contacto-h3-fs, bolder);
+        @include margin($body-XS-mg, 0, $body-S-mg, 0);        
+        }
+}

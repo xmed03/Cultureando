@@ -1,0 +1,128 @@
+/*DISPOSITIVOS CELULARES VERTICALES*/
+
+@media only screen and (max-width: 600px) {
+
+#list__main{
+    #list__main__section2{
+        @for $i from 1 through 6{
+            #list__main__section2__#{$i}{
+                @include border(solid, $headerBorder-l, 2px, 2px, 2px, 2px);
+                @include margin($body-XS-mg, 0, 0, 0);
+                @include padding($body-XS-mg, $body-XS-mg, $body-XS-mg, $body-XS-mg);
+                border-radius: 5%;
+                box-sizing: border-box;
+                h2{
+                    @include font(black, $headerFamily, $list-h2-fs, bolder);
+                    @include margin($body-XS-mg, 0, 0, 0);
+                }
+                p{
+                    @include font(black, $headerFamily, $list-p-fs, bolder);
+                    @include margin($body-XS-mg, 0, 0, 0);
+                }
+                h3{
+                    @include font(black, $headerFamily, $list-h3-fs, bolder);
+                }
+                h4{
+                    @include font(black, $headerFamily, $list-h4-fs, bolder);
+                }
+                #list__main__section2__div2__#{$i}{
+                    @include sizes($list-foto-hg-XS, 100%);
+                    @include margin($body-XS-mg, 0, 0, 0);
+                    @include bcg-img(url("../img/list/#{$i}.jpg"), center, cover, no-repeat);
+                    border-radius: 5%;
+                    box-sizing: border-box;
+                }
+                #list__main__section2__div1__#{$i}{
+                    @include margin($body-XS-mg, 0, 0, 0);
+                    display: grid;
+                    grid-template-columns: 50px auto;
+                    grid-template-rows: 30px 20px;
+                    grid-column-gap: $body-XS-mg;
+                    grid-template-areas: "list__foto__#{$i} list__h3__#{$i}" "list__foto__#{$i} list__h4__#{$i}"; 
+                    @each $secc in antonieta, pedro, emilia{
+                        .list__main__section2__div1__foto__#{$secc}{
+                            @include bcg-img(url("../img/list/#{$secc}.jpg"), center, cover, no-repeat);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                @each $secc in foto, h3, h4{
+                        #list__main__section2__div1__#{$secc}__#{$i}{
+                            grid-area: list__#{$secc}__#{$i};
+                        }
+                }     
+            }
+        }
+    }
+
+}
+
+}
+
+
+
+/*DISPOSITIVOS CELULARES HORIZONTALES*/
+
+@media only screen and (min-width: 600px) {
+
+#list__main{
+    #list__main__section2{
+        @for $i from 1 through 6{
+            #list__main__section2__#{$i}{
+                @include border(solid, $headerBorder-l, 2px, 2px, 2px, 2px);
+                @include margin($body-S-mg, 0, 0, 0);
+                @include padding($body-S-mg, $body-S-mg, $body-S-mg, $body-S-mg);
+                border-radius: 5%;
+                box-sizing: border-box;
+                h2{
+                    @include font(black, $headerFamily, $list-h2S-fs, bolder);
+                    @include margin($body-S-mg, 0, 0, 0);
+                }
+                p{
+                    @include font(black, $headerFamily, $list-pS-fs, bolder);
+                    @include margin($body-S-mg, 0, 0, 0);
+                    width: calc(50% - 30px);
+                }
+                h3{
+                    @include font(black, $headerFamily, $list-h3S-fs, bolder);
+                }
+                h4{
+                    @include font(black, $headerFamily, $list-h4S-fs, bolder);
+                }
+                #list__main__section2__div2__#{$i}{
+                    @include sizes($list-foto-hg-S, 50%);
+                    @include margin($body-S-mg, 0, 0, 0);
+                    @include bcg-img(url("../img/list/#{$i}.jpg"), center, cover, no-repeat);
+                    border-radius: 5%;
+                    box-sizing: border-box;
+                }
+                #list__main__section2__div1__#{$i}{
+                    @include margin($body-S-mg, 0, 0, 0);
+                    display: grid;
+                    grid-template-columns: 50px auto;
+                    grid-template-rows: 30px 20px;
+                    grid-column-gap: $body-XS-mg;
+                    grid-template-areas: "list__foto__#{$i} list__h3__#{$i}" "list__foto__#{$i} list__h4__#{$i}"; 
+                    @each $secc in antonieta, pedro, emilia{
+                        .list__main__section2__div1__foto__#{$secc}{
+                            @include bcg-img(url("../img/list/#{$secc}.jpg"), center, cover, no-repeat);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                @each $secc in foto, h3, h4{
+                        #list__main__section2__div1__#{$secc}__#{$i}{
+                            grid-area: list__#{$secc}__#{$i};
+                        }
+                }
+                #list__main__section2__div3__#{$i}{
+                    @include display(flex, row wrap, flex-start, flex-start);
+                    gap: $body-S-mg;
+                }
+            }
+        }
+    }
+
+}
+
+}

@@ -12,15 +12,18 @@
     box-sizing: border-box;
     #header__nav__logo{
         @include sizes($header-nav-menu, $header-logo-wd);
-        @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+        @include bcg-img(url("../img/header/logo.png"), center, cover, no-repeat);
     }
     #header__nav__right{
         @include display(flex, row wrap, center, flex-end);
         @include sizes(auto, 100%);
-        @each $secc in rightMenu2, right__menuLabel, subscribe, rightMenu, rightLupa, rightNav{
+        @each $secc in rightMenu2, right__menuLabel, subscribe, rightMenu, rightLupa{
             #header__nav__#{$secc}{
                 display: none;
             }
+        }
+        .header__nav__rightNav{
+            display: none;
         }
         .header__nav__right{
             appearance: none;
@@ -31,6 +34,9 @@
             #header__nav__right__#{$secc}{
                 @include bcg-img(url("../img/header/#{$secc}.png"), center, cover, no-repeat);
             }
+        }
+        .header__nav__right__nav{
+            @include bcg-img(url("../img/header/nav.png"), center, cover, no-repeat);
         }
         .header__nav__rightMenu{
             @include display(flex, row wrap, center, flex-start);
@@ -79,7 +85,7 @@
         }
         #header__nav__rightNav__logo{
             @include sizes(50px, 150px);
-            @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+            @include bcg-img(url("../img/header/logo.png"), center, cover, no-repeat);
             margin-bottom: 20px;
         }
         .header__nav__rightNav__p1{
@@ -89,28 +95,28 @@
         .header__nav__rightNav__p2{
             @include font($headerRight-l, $headerFamily, 15px, bolder);
         }
-        .header__nav__rightNav{
+        .header__nav__rightNav__div{
             @include font($headerFont-l, $headerFamily, 20px, bolder);
             line-height: 50px;
         }
-        #header__nav__right__nav:checked{
+        .header__nav__right__nav:checked{
             position: absolute;
             top: 15px;
             left: calc(100% - 65px);
             background-image: url("../img/header/cross.png");
             z-index: 3;
         }
-        #header__nav__right__nav:checked ~ #header__nav__rightNav{
+        .header__nav__right__nav:checked ~ .header__nav__rightNav{
             @include display(flex, column nowrap, flex-start, flex-start);
             @include sizes(100vh, calc(100% - 45px));
             @include padding(60px, 20px, 8px, 150px);
             @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
             position: absolute;
-            top: 0;
+            top: 0vh;
             left: 0;
             background-color: $headerNavbcg;
         }
-        .header__nav__rightNav:hover{
+        .header__nav__rightNav__div:hover{
             color: $headerRightHover-l;
         }
     }
@@ -132,26 +138,32 @@
         box-sizing: border-box;
         #header__nav__logo{
             @include sizes($header-nav-menu, $header-logo-wd);
-            @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+            @include bcg-img(url("../img/header/logo.png"), center, cover, no-repeat);
         }
         #header__nav__right{
             @include display(flex, row wrap, center, flex-end);
             @include sizes(auto, 100%);
             @include font($headerFont-l, $headerFamily, 15px, bolder);
-            @each $secc in rightMenu2, subscribe, rightMenu, rightLupa, rightNav{
+            @each $secc in rightMenu2, subscribe, rightMenu, rightLupa{
                 #header__nav__#{$secc}{
                     display: none;
                 }
+            }
+            .header__nav__rightNav{
+                display: none;
             }
             .header__nav__right{
                 appearance: none;
                 @include sizes($header-nav-menu, $header-nav-menu);
                 @include margin(0, $header-nav-menu-mg, 0, 0);
             }
-            @each $secc in menu, lupa, nav{
+            @each $secc in menu, lupa{
                 #header__nav__right__#{$secc}{
                     @include bcg-img(url("../img/header/#{$secc}.png"), center, cover, no-repeat);
                 }
+            }
+            .header__nav__right__nav{
+                @include bcg-img(url("../img/header/nav.png"), center, cover, no-repeat);
             }
             .header__nav__rightMenu{
                 @include display(flex, row wrap, center, flex-start);
@@ -200,7 +212,7 @@
             }
             #header__nav__rightNav__logo{
                 @include sizes(50px, 150px);
-                @include bcg-img(url("../img/header/logo.jpg"), center, cover, no-repeat);
+                @include bcg-img(url("../img/header/logo.png"), center, cover, no-repeat);
                 margin-bottom: 20px;
                 z-index: 4;
             }
@@ -211,28 +223,28 @@
             .header__nav__rightNav__p2{
                 @include font($headerRight-l, $headerFamily, 15px, bolder);
             }
-            .header__nav__rightNav{
+            .header__nav__rightNav__div{
                 @include font($headerFont-l, $headerFamily, 20px, bolder);
                 line-height: 50px;
             }
-            #header__nav__right__nav:checked{
+            .header__nav__right__nav:checked{
                 position: absolute;
                 top: 15px;
                 left: calc(100% - 65px);
                 background-image: url("../img/header/cross.png");
                 z-index: 3;
             }
-            #header__nav__right__nav:checked ~ #header__nav__rightNav{
+            .header__nav__right__nav:checked ~ .header__nav__rightNav{
                 @include display(flex, column nowrap, flex-start, flex-start);
                 @include sizes(100vh, 300px);
                 @include padding(60px, 20px, 8px, 150px);
                 @include border(solid, $headerBorder-l, 0px, 0px, 1px, 0px);
                 position: absolute;
-                top: 0;
+                top: 0vh;
                 left: calc(100% - 345px);
                 background-color: $headerNavbcg;
             }
-            .header__nav__rightNav:hover{
+            .header__nav__rightNav__div:hover{
                 color: $headerRightHover-l;
             }
         }
@@ -309,7 +321,7 @@ header{
             }
             @each $red in fb, tw, ig, yt{
                 #header__section__spanRight__#{$red}{
-                    @include bcg-img(url("../img/header/#{$red}.png"), center, cover, no-repeat);
+                    @include bcg-img(url("../img/header/#{$red}.svg"), center, cover, no-repeat);
                 }
             } 
         }
@@ -332,12 +344,12 @@ header{
             .header__nav__rightMenu2:hover{
                 color: $headerRightHover-l;
             }
-            #header__nav__rightNav{
+            #index__header__nav__rightNav{
                 top: -$header-hg !important;
-            }
-            #header__nav__right__nav:checked{
-                top: 15px -$header-hg !important;
-            }            
+            }  
+            #index__header__nav__right__nav:checked{
+                top: -$header-hg + 15px !important;
+            }       
         }
     }
     #index__header__nav{

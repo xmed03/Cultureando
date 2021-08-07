@@ -36,10 +36,10 @@ body{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: repeat(14, auto);
-            grid-template-areas: "index__main1 index__main1 index__main1" "index__main2 index__main2 index__main2" "index__main3__1 index__main3__1 index__main3__1" "index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__titulo__principales" "index__principales__1 index__principales__1 index__principales__1" "index__principales__2 index__principales__2 index__principales__2" "index__redes__fb index__redes__ig index__redes__yt" "index__titulo__trending index__titulo__trending index__titulo__trending" "index__trending__musica index__trending__musica index__trending__musica" "index__trending__teatro index__trending__teatro index__trending__teatro" "index__trending__cine index__trending__cine index__trending__cine" "index__trending__literatura index__trending__literatura index__trending__literatura" "index__titulo__reciente index__titulo__reciente index__titulo__reciente";
+            grid-template-areas: "index__main1 index__main1 index__main1" "index__main2 index__main2 index__main2" "index__main3__1 index__main3__1 index__main3__1" "index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__titulo__principales" "index__principales__1 index__principales__1 index__principales__1" "index__principales__2 index__principales__2 index__principales__2" "index__redes__fb index__redes__ig index__redes__yt" "index__titulo__trending index__titulo__trending index__titulo__trending" "index__trending__musica index__trending__musica index__trending__musica" "index__trending__teatro index__trending__teatro index__trending__teatro" "index__trending__cine index__trending__cine index__trending__cine" "index__trending__literatura index__trending__literatura index__trending__literatura";
             grid-column-gap: $body-XS-mg;
             grid-row-gap: $body-XS-mg;
-            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura, titulo__reciente{
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura{
                 #index__main__section2__#{$secc}{
                     grid-area: index__#{$secc};
                 }
@@ -137,7 +137,7 @@ body{
                 @include font($headerNavbcg, $headerFamily, $index-main-redesbig, bolder);
                 border-radius: 5%;
             }
-            @each $secc in main1, main2, main3__1, main3__2, titulo__principales__div, principales__1__div, principales__2__div, redes__fb, redes__ig, redes__yt, trending__musica, trending__teatro, trending__cine, trending__literatura, titulo__reciente__div{
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales__div, principales__1__div, principales__2__div, redes__fb, redes__ig, redes__yt, trending__musica, trending__teatro, trending__cine, trending__literatura{
                 #index__main__section2__#{$secc}{
                     @include bcg-img(url("../img/index/#{$secc}.jpg"), center, cover, no-repeat);
                 }
@@ -145,11 +145,6 @@ body{
             @each $secc in titulo__principales__div, titulo__reciente__div, redes__fb__div, redes__ig__div, redes__yt__div{
                 #index__main__section2__#{$secc}{
                     @include bcg-img(url("../img/index/#{$secc}.svg"), center, cover, no-repeat);
-                }
-            }
-            @each $secc in redes__fb__div, redes__ig__div, redes__yt__div{
-                #index__main__section2__#{$secc}{
-                    background-color: red;
                 }
             }
         }
@@ -193,29 +188,29 @@ body{
             }
         }
         #index__main__section2{
-            @include margin($body-S-mg, 0, 0, 0);
+            @include margin($body-XS-mg, 0, 0, 0);
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: repeat(14, auto);
-            grid-template-areas: "index__main1 index__main1 index__main1" "index__main2 index__main2 index__main2" "index__main3__1 index__main3__1 index__main3__1" "index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__titulo__principales" "index__principales__1 index__principales__1 index__principales__1" "index__principales__2 index__principales__2 index__principales__2" "index__redes__fb index__redes__ig index__redes__yt" "index__titulo__trending index__titulo__trending index__titulo__trending" "index__trending__musica index__trending__musica index__trending__musica" "index__trending__teatro index__trending__teatro index__trending__teatro" "index__trending__cine index__trending__cine index__trending__cine" "index__trending__literatura index__trending__literatura index__trending__literatura" "index__titulo__reciente index__titulo__reciente index__titulo__reciente";
-            grid-column-gap: $body-S-mg;
-            grid-row-gap: $body-S-mg;
-            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura, titulo__reciente{
+            grid-template-areas: "index__main1 index__main1 index__main1" "index__main2 index__main2 index__main2" "index__main3__1 index__main3__1 index__main3__1" "index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__titulo__principales" "index__principales__1 index__principales__1 index__principales__1" "index__principales__2 index__principales__2 index__principales__2" "index__redes__fb index__redes__ig index__redes__yt" "index__titulo__trending index__titulo__trending index__titulo__trending" "index__trending__musica index__trending__musica index__trending__musica" "index__trending__teatro index__trending__teatro index__trending__teatro" "index__trending__cine index__trending__cine index__trending__cine" "index__trending__literatura index__trending__literatura index__trending__literatura";
+            grid-column-gap: $body-XS-mg;
+            grid-row-gap: $body-XS-mg;
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura{
                 #index__main__section2__#{$secc}{
                     grid-area: index__#{$secc};
                 }
             }
             #index__main__section2__main1{
-                @include sizes($section2-main1-hgXS, auto);
+                @include sizes($section2-main1-hgXS, calc(100% - 30px));
                 @include display(flex, column nowrap, flex-start, flex-end);
-                @include padding($body-S-mg, $body-S-mg, $body-S-mg, $body-S-mg);
+                @include padding($body-XS-mg, $body-XS-mg, $body-XS-mg, $body-XS-mg);
                 border-radius: 5%;
                 h2{
-                    @include margin($body-S-mg, 0, 0, 0);
+                    @include margin($body-XS-mg, 0, 0, 0);
                     @include font($headerNavbcg, $headerFamily, $index-main-titulobig-XS, bolder);
                 }
                 h3{
-                    @include margin($body-S-mg, 0, $body-S-mg, 0);
+                    @include margin($body-XS-mg, 0, $body-XS-mg, 0);
                     @include font($headerNavbcg, $headerFamily, $index-main-parrafo-XS, normal);
                 }
                 h4{
@@ -223,12 +218,12 @@ body{
                 }
             }
             #index__main__section2__main2, #index__main__section2__main3__1, #index__main__section2__main3__2{
-                @include sizes($section2-main2-hgXS, calc(100% - 60px));
+                @include sizes($section2-main2-hgXS, calc(100% - 30px));
                 @include display(flex, column nowrap, flex-start, flex-end);
-                @include padding($body-S-mg, $body-S-mg, $body-S-mg, $body-S-mg);
+                @include padding($body-XS-mg, $body-XS-mg, $body-XS-mg, $body-XS-mg);
                 border-radius: 5%;
                 h2{
-                    @include margin($body-S-mg, 0, 0, 0);
+                    @include margin($body-XS-mg, 0, 0, 0);
                     @include font($headerNavbcg, $headerFamily, $index-main-titulosmall-XS, bolder);
                 }
                 h4{
@@ -237,14 +232,14 @@ body{
             }
             .index__main__section2__titulo{
                 @include display(flex, column nowrap, flex-start, center);
-                @include margin($body-S-mg, 0, 0, 0);
+                @include margin($body-XS-mg, 0, 0, 0);
                 h2{
                     @include font(black, $headerFamily, $index-main-titulo-XS, bolder);
                     @include display(flex, row nowrap, flex-start, center);
                     div{
                         @include sizes($header-nav-menu, $header-nav-menu);
                         display: inline-block;
-                        @include margin(0, 0, 0, $body-S-mg);
+                        @include margin(0, 0, 0, $body-XS-mg);
                     }
                 }
                 h3{
@@ -256,13 +251,13 @@ body{
                 @include display(flex, column nowrap, flex-start, center);
                 @include margin($body-XS-mg, 0, 0, 0);
                 div{
-                    @include sizes($section2-main2-hgXS, calc(100% - 60px));
+                    @include sizes($section2-main2-hgXS, calc(100% - 30px));
                     @include display(flex, column nowrap, flex-start, flex-end);
-                    @include padding($body-S-mg, $body-S-mg, $body-S-mg, $body-S-mg);
+                    @include padding($body-XS-mg, $body-XS-mg, $body-XS-mg, $body-XS-mg);
                     border-radius: 5%;
                 }
                 h2{
-                    @include margin($body-S-mg, 0, 0, 0);
+                    @include margin($body-XS-mg, 0, 0, 0);
                     @include font($headerFont-l, $headerFamily, $index-main-principales-titulo-XS, bolder);
                 }
                 h3{
@@ -276,7 +271,7 @@ body{
             .index__main__section2__redes{
                 @include display(flex, column nowrap, center, center);
                 @include sizes($section2-redes-hgXS, 100%);
-                @include margin($body-S-mg, 0, 0, 0);
+                @include margin($body-XS-mg, 0, 0, 0);
                 border-radius: 5%;
                 div{
                     @include sizes($header-section-img, $header-section-img);
@@ -298,7 +293,7 @@ body{
                 @include font($headerNavbcg, $headerFamily, $index-main-redesbig, bolder);
                 border-radius: 5%;
             }
-            @each $secc in main1, main2, main3__1, main3__2, titulo__principales__div, principales__1__div, principales__2__div, redes__fb, redes__ig, redes__yt, trending__musica, trending__teatro, trending__cine, trending__literatura, titulo__reciente__div{
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales__div, principales__1__div, principales__2__div, redes__fb, redes__ig, redes__yt, trending__musica, trending__teatro, trending__cine, trending__literatura{
                 #index__main__section2__#{$secc}{
                     @include bcg-img(url("../img/index/#{$secc}.jpg"), center, cover, no-repeat);
                 }
@@ -306,11 +301,6 @@ body{
             @each $secc in titulo__principales__div, titulo__reciente__div, redes__fb__div, redes__ig__div, redes__yt__div{
                 #index__main__section2__#{$secc}{
                     @include bcg-img(url("../img/index/#{$secc}.svg"), center, cover, no-repeat);
-                }
-            }
-            @each $secc in redes__fb__div, redes__ig__div, redes__yt__div{
-                #index__main__section2__#{$secc}{
-                    background-color: red;
                 }
             }
         }
@@ -337,6 +327,69 @@ body{
         @include margin($body-XS-mg, $body-M-mg, $body-XS-mg, $body-M-mg);
         top: $header-hgL;
         width: calc(100% - 80px);
+        #index__main__section2{
+            @include margin($body-XS-mg, 0, 0, 0);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(12, auto);
+            grid-template-areas: "index__main1 index__main1 index__main1 index__main1 index__main1 index__main1" "index__main2 index__main2 index__main2 index__main2 index__main2 index__main2" "index__main3__1 index__main3__1 index__main3__1 index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__titulo__principales index__titulo__principales index__titulo__principales index__titulo__principales" "index__principales__1 index__principales__1 index__principales__1 index__principales__2 index__principales__2 index__principales__2" "index__redes__fb index__redes__fb index__redes__ig index__redes__ig index__redes__yt index__redes__yt" "index__titulo__trending index__titulo__trending index__titulo__trending index__titulo__trending index__titulo__trending index__titulo__trending" "index__trending__musica index__trending__musica index__trending__musica index__trending__musica index__trending__musica index__trending__musica" "index__trending__teatro index__trending__teatro index__trending__teatro index__trending__teatro index__trending__teatro index__trending__teatro" "index__trending__cine index__trending__cine index__trending__cine index__trending__cine index__trending__cine index__trending__cine" "index__trending__literatura index__trending__literatura index__trending__literatura index__trending__literatura index__trending__literatura index__trending__literatura";
+            grid-column-gap: $body-XS-mg;
+            grid-row-gap: $body-XS-mg;
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura{
+                #index__main__section2__#{$secc}{
+                    grid-area: index__#{$secc};
+                }
+            }
+            #index__main__section2__main1{
+                @include sizes($section2-main1-hgS, calc(100% - 30px));
+                h4{
+                    @include margin($body-XS-mg, 0, 0, 0);
+                    @include font($headerNavbcg, $headerFamily, $index-main-parrafo-XS, normal);
+                    @include display(flex, row nowrap, center, flex-start);
+                    div{
+                        @include sizes($header-nav-menu, $header-nav-menu);
+                        @include bcg-img(url("../img/index/main1__h4__div.jpg"), center, cover, no-repeat);
+                        display: inline-block;
+                        @include margin(0, 0, 0, $body-XS-mg);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            #index__main__section2__main2, #index__main__section2__main3__1, #index__main__section2__main3__2{
+                h4{
+                    @include margin($body-XS-mg, 0, 0, 0);
+                    @include font($headerNavbcg, $headerFamily, $index-main-parrafo-XS, normal);
+                    @include display(flex, row nowrap, center, flex-start);
+                }
+            }
+            .index__main__section2__principales{
+                h4{
+                    @include margin($body-XS-mg, 0, 0, 0);
+                    @include font($headerFont-l, $headerFamily, $index-main-principales-parrafo-XS, bolder);
+                    @include display(flex, row nowrap, center, flex-start);
+                    div{
+                        @include sizes($section2-h4-div-hgS, $section2-h4-div-hgS);
+                        display: inline-block;
+                        @include margin(0, 0, 0, $body-XS-mg);
+                        border-radius: 50%;
+                    }
+                } 
+            }
+            #index__main__section2__principales__1{
+                h4{
+                    div{
+                        @include bcg-img(url("../img/index/main1__h4__div1.jpg"), center, cover, no-repeat);
+                    }
+                }
+            }
+            #index__main__section2__principales__2{
+                h4{
+                    div{
+                        @include bcg-img(url("../img/index/main1__h4__div2.jpg"), center, cover, no-repeat);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -358,10 +411,28 @@ body{
 
     main{
         @include margin($body-XS-mg, $body-L-mg, $body-XS-mg, $body-L-mg);
-        width: calc(100% - 100px);
+        width: calc(100% - 100px);        
     }
+
     #index__main{
         top: $header-hg+$header-hgL;
+        #index__main__section2{
+            @include margin($body-XS-mg, 0, 0, 0);
+            display: grid;
+            grid-template-columns: 6fr 3fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(9, auto);
+            grid-template-areas: "index__main1 index__main2 index__main2 index__main2 index__main2" "index__main1 index__main3__1 index__main3__2 index__main3__2 index__main3__2" "index__titulo__principales index__titulo__principales index__redes__fb index__redes__ig index__redes__yt" "index__principales__1 index__principales__1 index__titulo__trending index__titulo__trending index__titulo__trending" "index__principales__1 index__principales__1 index__trending__musica index__trending__musica index__trending__musica" "index__principales__1 index__principales__1 index__trending__teatro index__trending__teatro index__trending__teatro" "index__principales__1 index__principales__1 index__trending__cine index__trending__cine index__trending__cine" "index__principales__1 index__principales__1 index__trending__literatura index__trending__literatura index__trending__literatura" "index__principales__2 index__principales__2 none none none";
+            grid-column-gap: $body-XS-mg;
+            grid-row-gap: $body-XS-mg;
+            @each $secc in main1, main2, main3__1, main3__2, titulo__principales, principales__1, principales__2, redes__fb, redes__ig, redes__yt, titulo__trending, trending__musica, trending__teatro, trending__cine, trending__literatura{
+                #index__main__section2__#{$secc}{
+                    grid-area: index__#{$secc};
+                }
+            }
+            #index__main__section2__main2, #index__main__section2__main3__1, #index__main__section2__main3__2{
+                height: 275px;
+            }
+        }
     }
 }
 
